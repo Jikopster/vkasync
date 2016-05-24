@@ -50,7 +50,7 @@ android {
     }
     defaultConfig {
         applicationId "org.jikopster.vkasync"
-        minSdkVersion 9
+        minSdkVersion 11
         targetSdkVersion 22
         versionCode 24
         versionName "1.10.2.24"
@@ -60,6 +60,8 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    productFlavors {
     }
 }
 
@@ -74,4 +76,5 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
         transitive = true;
     }
+    compile project(':lib')
 }
